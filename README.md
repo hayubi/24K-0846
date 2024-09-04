@@ -4,3 +4,5 @@ My name is Hafsa Ayubi, currently studying at FAST university (Karachi campus). 
 - baking
 - having funtime with family
 - talking with my friends
+  
+![pi1](https://github.com/user-attachments/assets/7c0c773d-234c-44d7-9f36-e8cc330737f9)
