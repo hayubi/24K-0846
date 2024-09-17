@@ -12,7 +12,7 @@ int main()
 int actualAmt;
 float savedAmt, afterDsct;
 printf("enter cost of items");
-scanf("%d", actualAmt);
+scanf("%d", &actualAmt);
 if (actualAmt>=500)
 	{
 	if (actualAmt<2000)
