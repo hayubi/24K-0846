@@ -33,7 +33,7 @@ int main()
 {
 int ID, units;
 char name[50];
-float amount, surchargeAmt, netAmt
+float amount, surchargeAmt, netAmt;
 printf("enter customer ID");
 scanf("%d", &ID);
 printf("enter customer name");
@@ -58,7 +58,10 @@ if (amount > 18000)
 printf("Customer ID : %d", ID);
 printf("Customer Name : %s",name);
 printf("Units Consumed : %d", units);
-
+printf("Amount Charges : %f", amount);
+printf("Surharge Amount : %f", surchargeAmt);
+printf("Net Amount Paid by the Customer : %f", netAmt);
+}
 
 
 
