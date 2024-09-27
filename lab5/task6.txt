@@ -1,0 +1,4 @@
+Task6:Explain why the output is 30
+First, we will check whether 5 is greater than 8, which is false therefore 0.
+We will now move to the else part(after colon). According to order of precedence, we wil first check the condition whether 2 is less than 5, which is true therefore, 1.
+1 is not equals to 1. This is false therefore, 0. We will now move to the else part(after colon). Thus, the answer is 30.
