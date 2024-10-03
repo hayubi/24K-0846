@@ -3,7 +3,7 @@
 #include <stdio.h>
 int main()
 {
-int row, col, i;
+int row, col;
 
 for (col=0; col<4; col++)
 {printf("* ");}
