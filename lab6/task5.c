@@ -1,4 +1,12 @@
-/*5.Make a pattern mentioned below using loops*/
+/*
+5.Make a pattern mentioned below using loops
+* * * * *
+*       *
+*       *
+*       *
+*       *
+* * * * *
+*/
 
 #include <stdio.h>
 int main()
