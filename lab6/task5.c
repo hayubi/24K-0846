@@ -11,15 +11,12 @@
 #include <stdio.h>
 int main()
 {
-int row, col;
-
-for (col=0; col<4; col++)
-{printf("* ");}
-
-for (row=1; row<5; row++)
-{printf("*       *\n");}
-
-for (col=0; col<5; col++)
-{printf("* ");}
-
+int i;
+for (i=1; i<=6; i++)
+{
+	if ((i==1) || (i==6))
+		{printf("* * * * *\n");}
+	else
+		{printf("*       *\n");}
+}
 }
