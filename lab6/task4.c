@@ -4,16 +4,19 @@ a number that is equal to the sum of cubes of its digits.*/
 #include <stdio.h>
 int main()
 {
-int num, sum=0, digit, cube;
+int num, sum=0, digit, cube, temp;
 printf("enter a number");
 scanf("%d", &num);
-while (num != 0)
+
+temp = num;
+
+while (temp != 0)
 {
-	digit = num%10;
-	cube = digit^3;
-	num = num/10;
+	digit = temp%10;
+	cube = digit*digit*digit;
+	temp = temp/10;
+	sum = sum + cube;
 }
-sum = sum + cube;
 if (sum == num)
 	{printf("Armstrong number");}
 else
