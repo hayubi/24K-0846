@@ -11,39 +11,43 @@ Output:
 Number 2 occur more than once.
 Note: You cannot utilize nested loops.*/
 
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-  int temp=0, num, index=0, x=0;
-  printf("Enter the size of the array: ");
-  scanf("%d", &num);
-  int array[num];
+    int arr[100];
+    int frequency[1000];
+    int size, i, morethanonce=-1;
 
-  // Storing values in the array.
-  for(int i=0 ; i<num ; i++)
-     {printf("Enter the number to be stored on index %d: ", i);
-      scanf("%d", &array[i]);}
+    //entering elements into the array 'arr'
+    printf("enter the size of the array");
+    scanf("%d", &size);
+    for(i=0; i<size; i++)
+    {
+        printf("Element %d = ", i+1);
+        scanf("%d", &arr[i]);
+    }
 
-  // The loop runs infinite times until a repeated number is found or the index variable equals the size of the array.
-  for(;;)
-     {
-        if((array[index] == array[x+1]) && (index != x+1))
-            {temp = array[index];
-            break;}
-        else
-            {x++;}
-        
-        if(x >= num)
-            {index++;
-            x=0;}
-        if(index == num)
-            {break;}
-     }
- 
-  // Printing the repeated number if any.
-  if(temp != 0)
-    {printf("Number %d occurs more than once", temp);}
-  else
-    {printf("No number occurs more than once in the array");}
-  return 0;
+    //initialising 'frequency' array to 0
+    for(i=0; i<size; i++)
+        {frequency[i] = 0;}
+    
+    //counting frequency of each element
+    for(i=0; i<size; i++)
+        {frequency[arr[i]] = frequency[arr[i]] + 1;}
+    
+    //checking if any number occurs more than once
+    for(i=0; i<size; i++)
+    {
+        if (frequency[arr[i]] > 1)
+        {
+            morethanonce = arr[i];
+            break; //bcz we have to find only one number that occurs more than once
+        }
+    }
+
+    if (morethanonce != -1)
+        {printf("Number %d occurs more than once", morethanonce);}
+    else
+        {printf("No number occurs more than once in the array");}
+
 }
