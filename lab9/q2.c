@@ -4,25 +4,27 @@ them. It should perform the swap and display the updated values.*/
 
 #include <stdio.h>
 
-void swapfunction(int a, int b);
+void swapIntegers(int num1, int num2);
 
 int main()
 {
-    int num1, num2, result;
-    printf("enter number 1: ");
-    scanf("%d", &num1);
-    printf("enter number 2: ");
-    scanf("%d", &num2);
+    int num1, num2;
 
-    swapfunction(num1, num2);
-    printf("num 1: %d\n", num1);
-    printf("num 2: %d", num2);
+    printf("enter first number: ");
+    scanf("%d", &num1);
+    printf("enter second number: ");
+    scanf("%d", &num2);
+    swapIntegers(num1, num2);
 }
 
-void swapfunction(int a, int b)
+void swapIntegers(int num1, int num2)
 {
+    printf("\nOriginal Values: \nNumber 1: %d \nNumber 2: %d \n", num1, num2);
+
     int temp;
-    temp=a;
-    a=b;
-    b=temp;
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+
+    printf("\nReversed Values: \nNumber 1: %d \nNumber 2: %d \n", num1, num2);
 }
