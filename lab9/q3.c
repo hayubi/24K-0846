@@ -2,41 +2,43 @@
 main program to check if numbers entered by the user are prime.*/
 
 #include <stdio.h>
-int prime(int num);
+
+void checkPrime(int num);
+
 int main()
 {
-    int numbers[100];
-    int i, num, result;
-    printf("how many numbers do you want to enter?");
-    scanf("%d", &num);
-    for (i=0; i<num; i++)
-    {
-        printf("enter number %d : ", i+1);
-        scanf("%d", &numbers[i]);
-        result = prime(numbers[i]);
-    }
+    int count, i, num;
+    printf("Checking Prime Numbers:\nHow many numbers do you want to check? ");
+    scanf("%d", &count);
 
-    if (result==1)
-        {printf("prime");}
-    else
-        {printf("not prime");}
+    for(i=0; i<count; i++)
+    {
+        printf("\nenter number %d: ", i+1);
+        scanf("%d", &num);
+        checkPrime(num);
+    }
 }
 
-int prime(int num)
+void checkPrime(int num)
 {
-    int isprime=1, i, j;
+    int i, prime;
 
-    if (num<=1)
-        {isprime=0;}
+    if (num < 1)
+        {prime=0;}
+    else if (num == 1)
+        {prime=0;}
     else
-    {
-        for(j=2; j<i; j++)
-        if(j%2 == 0)
+        prime=1;
+        for(i=2; i<num; i++)
         {
-            isprime=0;
-            break;
+            if (num%i == 0)
+                {
+                    prime=0;
+                    break;
+                }
         }
-    }
-    return isprime;
-
+        if (prime == 0)
+            {printf("%d is not a prime number\n", num);}
+        else 
+            {printf("%d is a prime number\n", num);}
 }
