@@ -18,8 +18,8 @@ int main()
         return 1;
     }
 
-    fptr2 = fopen("file1.txt", "w");
-    while (fgets(text, sizeof(text), fptr1))
+    fptr2 = fopen("file2.txt", "w");
+    while (fgets(text, sizeof(text), fptr1) != NULL)
     {
         fprintf(fptr2, "%s", text);
     }
